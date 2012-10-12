@@ -14,9 +14,9 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     @collection.each(@appendChick)
     this
     
-  appendChick: (chick) ->
+  appendChick: (chick) =>
     view = new Milkagotchi.Views.Chick(model: chick)
-    $('#chick_list').prepend(view.render().el)
+    @$('#chick_list').prepend(view.render().el)
     
   createChick: (event) ->
     event.preventDefault()

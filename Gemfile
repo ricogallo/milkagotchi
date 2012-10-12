@@ -7,7 +7,7 @@ group :assets do
 end
 gem "jquery-rails"
 gem "backbone-on-rails"
-gem "thin", ">= 1.5.0", :group => :production
+gem "thin", ">= 1.5.0"
 gem "mongoid", ">= 3.0.9"
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test

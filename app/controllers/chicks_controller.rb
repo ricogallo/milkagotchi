@@ -18,6 +18,6 @@ class ChicksController < ApplicationController
   end
   
   def destroy
-    respond_with Chick.destroy(params[:id])
+    respond_with Chick.find(params[:id]).destroy
   end
 end

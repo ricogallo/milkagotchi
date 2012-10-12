@@ -1,12 +1,10 @@
-<h1>Here are the Chicks</h1>
+<h1>Here are the chicks!</h1>
 
 <form id="new_chick" class="form-inline">
   <div class="input-append">
-      <input type="text" placeholder="Type its name" name="name" id="new_chick_name" autofocus>
-      <input type="submit" value="New!" class="btn">
+    <input type="text" placeholder="Type its name" name="name" id="new_chick_name" autofocus class="span4">
+    <input type="submit" value="New!" class="btn">
   </div>
-
-
 </form>
 
 <section id="chick_list"><section>
