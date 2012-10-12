@@ -4,7 +4,7 @@ window.Milkagotchi =
   Views: {}
   Routers: {}
   init: ->
-    new Backbone.Routers.Milkagotchi()
+    new Milkagotchi.Routers.Chicks()
     Backbone.history.start(pushState: true)
 
 $(document).ready ->
