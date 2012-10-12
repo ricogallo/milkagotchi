@@ -17,11 +17,11 @@ class Chick
   def mood
     attributes = [food, toilet, fun]
     if attributes.all? { |value| value >= 3 }
-      Chick::HAPPY
+      HAPPY
     elsif attributes.one? { |value| value < 3 }
-      Chick::MEH
+      MEH
     else
-      Chick::SAD
+      SAD
     end
   end
 end
