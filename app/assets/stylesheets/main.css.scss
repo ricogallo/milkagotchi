@@ -3,16 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background:{
-    image: url('tileable_wood_texture.png');
-  }
   .content {
-    padding:20px 0 20px 20px;
     background: {
       color: rgba(238,238,238,0.5);
     }
     #new_chick_name {
-      width:247px;
+      width:224px;
     }
   }
 }
@@ -24,9 +20,6 @@ body {
   .chick {
     .name:hover {
       text-decoration:underline;
-    }
-    .details {
-      text-aling:right;
     }
     .close {
       float:none;

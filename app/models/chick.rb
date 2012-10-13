@@ -8,9 +8,9 @@ class Chick
   field :study, type: Integer, default: 0
   
   validates_presence_of :name
-  validates :name, length: { within: 3..20 }, allow_blank: true
+  validates :name, length: { within: 3..16 }, allow_blank: true
   
-  HAPPY, MEH, SAD = "^_^", "-_-", ">_<"
+  HAPPY, MEH, SAD = "^.^", "-_-", "; _ ;"
   def as_json(options={})
     super options.merge(methods: :mood)
   end

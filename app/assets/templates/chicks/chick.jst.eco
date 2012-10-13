@@ -1,7 +1,7 @@
-<div class="span4 chick">
+<div class="span5 chick">
   <div class="row">
-    <div class="span2 name"><%= @chick.get('name') %></div>
-    <div class="span2 details">
+    <div class="span2_5 name"><%= @chick.get('name') %></div>
+    <div class="span2_5 details">
       <span class="food label label-important"><%= @chick.get('food') %></span>
       <span class="toilet label label-info"><%= @chick.get('toilet') %></span>
       <span class="fun label label-success"><%= @chick.get('fun') %></span>

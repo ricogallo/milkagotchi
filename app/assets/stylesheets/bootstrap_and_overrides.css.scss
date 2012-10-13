@@ -1,8 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Salsa);
-@import url(http://fonts.googleapis.com/css?family=PT+Mono);
 $sansFontFamily: 'Salsa';
 $baseFontSize: 18px;
 $inputBackground: rgba(255,255,255,0.3);
 @import "bootstrap";
-body { padding-top: 30px; }
-@import "bootstrap-responsive";
+body { padding-top: 30px; };
+.span2_5 {
+  @extend span2;
+  width:160px;
+}
+.span4_5 {
+  @extend span4;
+  width:320px;
+}
