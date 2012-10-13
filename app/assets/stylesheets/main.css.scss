@@ -4,11 +4,15 @@
 
 body {
   background:{
-    image: url('retina_wood.png');
+    image: url('tileable_wood_texture.png');
   }
   .content {
+    padding:20px 0 20px 20px;
     background: {
-      color: rgba(238,238,238,0.5)
+      color: rgba(238,238,238,0.5);
+    }
+    #new_chick_name {
+      width:247px;
     }
   }
 }
@@ -25,8 +29,8 @@ body {
       text-aling:right;
     }
     .close {
+      float:none;
       display:none;
     }
   }
 }
-

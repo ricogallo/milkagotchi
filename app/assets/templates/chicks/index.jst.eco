@@ -1,10 +1,13 @@
-<h1>Spawn new chicks!</h1>
-
-<form id="new_chick" class="form-inline">
-  <div class="input-append">
-    <input type="text" placeholder="Type the chick's name" name="name" id="new_chick_name" autofocus class="input-xlarge">
-    <input type="submit" value="Boom!" class="btn">
+<div class="row">
+  <div class="span4 content">
+    <h1>Spawn new chicks!</h1>
+    <form id="new_chick" class="form-inline">
+      <div class="input-append">
+        <input type="text" placeholder="Type the chick's name" name="name" id="new_chick_name" autofocus>
+        <input type="submit" value="Boom!" class="btn">
+      </div>
+    </form>
+    <section id="chick_list"><section>
   </div>
-</form>
-
-<section id="chick_list"><section>
+  <div class="span8 content"></div>
+</div>
