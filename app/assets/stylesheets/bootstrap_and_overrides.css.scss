@@ -12,3 +12,8 @@ body { padding-top: 30px; };
   @extend span4;
   width:320px;
 }
+legend {
+  border: {
+    bottom:1px solid #CCC;
+  }
+}
