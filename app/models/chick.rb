@@ -10,6 +10,8 @@ class Chick
   validates_presence_of :name
   validates :name, length: { within: 3..20 }, allow_blank: true
   
+  HAPPY, MEH, SAD = "=^_^=", "\" -_-", "\\;_;/"
+  
   def as_json(options={})
     super options.merge(methods: :mood)
   end
@@ -17,11 +19,11 @@ class Chick
   def mood
     attributes = [food, toilet, fun]
     if attributes.all? { |value| value >= 3 }
-      "^_^"
+      HAPPY
     elsif attributes.one? { |value| value < 3 }
-      "°_°"
+      MEH
     else
-      "-_-"
+      SAD
     end
   end
 end
