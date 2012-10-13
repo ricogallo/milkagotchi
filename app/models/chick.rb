@@ -1,6 +1,5 @@
+# encoding: UTF-8
 class Chick
-  SAD, MEH, HAPPY = 0, 1, 2
-  
   include Mongoid::Document
   field :name, type: String
   field :food, type: Integer, default: 3
@@ -18,11 +17,11 @@ class Chick
   def mood
     attributes = [food, toilet, fun]
     if attributes.all? { |value| value >= 3 }
-      HAPPY
+      "^_^"
     elsif attributes.one? { |value| value < 3 }
-      MEH
+      "°_°"
     else
-      SAD
+      "-_-"
     end
   end
 end

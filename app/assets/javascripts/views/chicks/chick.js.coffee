@@ -1,12 +1,11 @@
 class Milkagotchi.Views.Chick extends Backbone.View
-
-  template: JST['chicks/chick']
-  
+  template: JST['chicks/chick']  
   className: 'row'
     
   events:
-    'click .chick': 'playMilkagotchi'
+    'click .name': 'playMilkagotchi'
     'click .close': 'destroyChick'
+    'hover': 'displayDestroy'
     
   initialize: ->
     @model.on('destroy', @remove, this)
@@ -20,3 +19,6 @@ class Milkagotchi.Views.Chick extends Backbone.View
     
   destroyChick: ->
     @model.destroy wait: true
+    
+  displayDestroy: ->
+    @$('.close').toggle()

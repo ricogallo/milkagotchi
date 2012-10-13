@@ -3,15 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .chick {
-  color:gray;
   font: {
     size: 22px;
   }
   line-height:1.5;
-  &:hover {
-    color:black;
-    font: {
-      weight: bold;
-    }
+  .name:hover {
+    text-decoration:underline;
+  }
+  .details {
+    text-aling:right;
+  }
+  .close {
+    margin:5px 0 0 0;
+    display:none;
   }
 }
