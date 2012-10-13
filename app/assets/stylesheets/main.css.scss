@@ -2,19 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.chick {
-  font: {
-    size: 22px;
+body {
+  background:{
+    image: url('retina_wood.png');
   }
-  line-height:1.5;
-  .name:hover {
-    text-decoration:underline;
-  }
-  .details {
-    text-aling:right;
-  }
-  .close {
-    margin:5px 0 0 0;
-    display:none;
+  .content {
+    background: {
+      color: rgba(238,238,238,0.5)
+    }
   }
 }
+#chick_list {
+  line-height:1.5;
+  padding:{
+    left:7px;
+  }
+  .chick {
+    .name:hover {
+      text-decoration:underline;
+    }
+    .details {
+      text-aling:right;
+    }
+    .close {
+      display:none;
+    }
+  }
+}
+
