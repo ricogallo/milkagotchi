@@ -5,7 +5,7 @@
       <span class="food label label-important"><%= @chick.get('food') %></span>
       <span class="toilet label label-info"><%= @chick.get('toilet') %></span>
       <span class="fun label label-success"><%= @chick.get('fun') %></span>
-      <span class="mood label label-inverse"><%= @chick.get('study') %></span>
+      <span class="study label label-inverse"><%= @chick.get('study') %></span>
       <span class="mood badge"><%= @chick.get('mood') %></span>
       <button class="close">&times;</button>
     </div>

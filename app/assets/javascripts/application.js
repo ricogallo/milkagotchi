@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-modal
+//= require bootstrap-tooltip
 //= require underscore
 //= require backbone
 //= require .//milkagotchi

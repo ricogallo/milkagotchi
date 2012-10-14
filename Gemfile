@@ -9,6 +9,7 @@ gem "jquery-rails"
 gem "backbone-on-rails"
 gem "thin", ">= 1.5.0"
 gem "mongoid", ">= 3.0.9"
+gem "rufus-scheduler", :require => "rufus/scheduler"
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test
 gem "database_cleaner", ">= 0.9.1", :group => :test

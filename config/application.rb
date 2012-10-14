@@ -16,6 +16,10 @@ if defined?(Bundler)
 end
 
 module Milkagotchi
+  def self.scheduler
+    Application.config.scheduler
+  end
+  
   class Application < Rails::Application
 
     # don't generate RSpec tests for views and helpers
@@ -78,5 +82,8 @@ module Milkagotchi
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    #custom configuration for rufus_scheduler gem
+    config.scheduler = Rufus::Scheduler.start_new
   end
 end

@@ -12,6 +12,13 @@ class Milkagotchi.Views.Chick extends Backbone.View
     
   render: ->
     $(@el).html(@template(chick: @model))
+    attributes = ["food", "toilet", "fun", "study", "mood"]
+    for attribute in attributes
+      @$(".details .#{attribute}").tooltip
+        title: attribute
+        delay:
+          show: 500
+          hide: 100
     this
   
   playMilkagotchi: ->

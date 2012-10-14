@@ -24,9 +24,34 @@ body {
     .name:hover {
       text-decoration:underline;
     }
+    .details {
+      font: {
+        size:12px;
+      }
+    }
     .close {
       float:none;
       display:none;
     }
   }
 }
+::-moz-selection {
+  background:#FF5E99;
+  color:#fff
+}
+::selection {
+  background:#FF5E99;
+  color:#fff
+}
+
+#playground {
+  margin-left: 40px;
+  height:400px;
+  background:{
+    image: url('milk.png');
+    repeat:no-repeat;
+    position:center center;
+  }
+}
+
+
