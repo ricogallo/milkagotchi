@@ -16,8 +16,8 @@ if defined?(Bundler)
 end
 
 module Milkagotchi
-  def self.scheduler
-    Application.config.scheduler
+  def self.config
+    Application.config
   end
   
   class Application < Rails::Application
@@ -85,5 +85,8 @@ module Milkagotchi
     
     #custom configuration for rufus_scheduler gem
     config.scheduler = Rufus::Scheduler.start_new
+    
+    #load external configurations (i.e. API keys, game options )
+    Psych.load_file("#{Rails.root}/config/config.yml").each { |k,v| config.send "#{k}=", v }
   end
 end
