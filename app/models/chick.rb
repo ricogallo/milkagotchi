@@ -13,7 +13,7 @@ class Chick
   
   after_create :set_automatic_reductions
   
-  HAPPY, MEH, SAD = "ꙩ‿ꙩ", "ఠ﹏ఠ", "ಠ︵ಠ"
+  HAPPY, MEH, SAD = "❤‿❤", "ఠ﹏ఠ", "ಠ︵ಠ"
   def as_json(options={})
     super options.merge(methods: :mood)
   end
