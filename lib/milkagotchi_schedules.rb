@@ -18,6 +18,5 @@ module MilkagotchiSchedules
     jobs = SCHEDULER.find_by_tag(self.id)
     jobs.each do |job|
       job.unschedule
-    end
   end
 end

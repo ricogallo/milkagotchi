@@ -92,7 +92,9 @@ module Milkagotchi
     
     #load external configurations (i.e. API keys, game options )
     ["pusher", "chicks"].each do |conf|
-      Psych.load_file("#{Rails.root}/config/#{conf}.yml").each { |k,v| config.send "#{k}=", v }
+      Psych.load_file("#{Rails.root}/config/#{conf}.yml").each do |key, value|
+        config.send "#{key}=", value
+      end
     end
   end
 end
