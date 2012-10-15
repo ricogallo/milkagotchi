@@ -91,6 +91,8 @@ module Milkagotchi
     config.scheduler = Rufus::Scheduler.start_new
     
     #load external configurations (i.e. API keys, game options )
-    Psych.load_file("#{Rails.root}/config/config.yml").each { |k,v| config.send "#{k}=", v }
+    ["pusher", "chicks"].each do |conf|
+      Psych.load_file("#{Rails.root}/config/#{conf}.yml").each { |k,v| config.send "#{k}=", v }
+    end
   end
 end

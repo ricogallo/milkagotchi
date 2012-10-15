@@ -1,0 +1,4 @@
+chick_timers:
+  food:   5m
+  toilet: 4m
+  fun:    4m

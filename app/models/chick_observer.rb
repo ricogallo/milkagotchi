@@ -1,6 +1,6 @@
 class ChickObserver < Mongoid::Observer
   def after_create(chick)
-    chick.automatically_reduce(food: '1m', toilet: '3m', fun: '5m')
+    chick.automatically_reduce(Milkagotchi.config.chick_timers)
   end
   
   def after_update(chick)

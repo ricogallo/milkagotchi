@@ -76,4 +76,6 @@ pickle-email-*.html
 **.swp
 
 #configurations
-config/config.yml
+config/pusher.yml
+config/mongoid.yml
+config/chicks.yml
