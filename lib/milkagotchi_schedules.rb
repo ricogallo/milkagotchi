@@ -1,7 +1,9 @@
 module MilkagotchiSchedules
+  SCHEDULER = Milkagotchi.config.scheduler
+  
   def automatically_reduce(time_table={})
     time_table.each do |attribute, time|
-      Milkagotchi.config.scheduler.every time, tags: "reduce:#{attribute}:#{self.id}" do |job|
+      SCHEDULER.every time, tags: self.id do |job|
         if self[attribute] < 1
           job.unschedule
         else
@@ -9,6 +11,13 @@ module MilkagotchiSchedules
           self.save!
         end
       end
+    end
+  end
+  
+  def unschedule_jobs
+    jobs = SCHEDULER.find_by_tag(self.id)
+    jobs.each do |job|
+      job.unschedule
     end
   end
 end
