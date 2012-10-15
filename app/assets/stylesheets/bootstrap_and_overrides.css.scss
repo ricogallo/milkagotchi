@@ -4,7 +4,12 @@ $sansFontFamily: 'Salsa';
 $baseFontSize: 18px;
 $inputBackground: rgba(255,255,255,0.3);
 @import "bootstrap";
-body { padding-top: 40px; };
+body { padding-top: 60px; };
+.content {
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+}
 .span2_5 {
   @extend span2;
   width:160px;

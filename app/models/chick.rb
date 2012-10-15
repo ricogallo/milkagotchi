@@ -11,8 +11,6 @@ class Chick
   validates_presence_of :name
   validates :name, length: { within: 3..16 }, allow_blank: true
   
-  after_create :set_automatic_reductions
-  
   HAPPY, MEH, SAD = "❤‿❤", "ఠ﹏ఠ", "ಠ︵ಠ"
   def as_json(options={})
     super options.merge(methods: :mood)
@@ -27,12 +25,5 @@ class Chick
     else
       SAD
     end
-  end
-  
-  protected
-  def set_automatic_reductions
-    automatically_reduce('food', '1m')
-    automatically_reduce('toilet', '3m')
-    automatically_reduce('fun', '5m')
   end
 end

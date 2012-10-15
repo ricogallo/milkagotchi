@@ -5,6 +5,7 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     'submit #new_chick': 'createChick'
       
   initialize: ->
+    Milkagotchi.notifier.subscribe('chicks')
     @collection.on('reset', @render, this)
     @collection.on('add', @appendChick, this)
   
