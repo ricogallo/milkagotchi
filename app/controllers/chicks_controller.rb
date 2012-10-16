@@ -10,7 +10,6 @@ class ChicksController < ApplicationController
   end
   
   def create
-    sleep 2
     respond_with Chick.create(params[:chick])
   end
   
