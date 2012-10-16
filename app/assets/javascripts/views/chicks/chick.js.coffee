@@ -8,8 +8,8 @@ class Milkagotchi.Views.Chick extends Backbone.View
     'hover': 'displayDestroy'
     
   initialize: ->
-    Milkagotchi.notifier.on("#{@model.get('_id')}-changed", @updateChick, this)
     @model.on('destroy', @remove, this)
+    Milkagotchi.notifier.on("#{@model.get('_id')}-changed", @updateChick, this)
     @model.on('change', @render, this)
     
   render: ->

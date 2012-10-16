@@ -5,6 +5,7 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     'submit #new_chick': 'createChick'
       
   initialize: ->
+    @spinnerize $('#heart')
     Milkagotchi.notifier.subscribe('chicks')
     @collection.on('reset', @render, this)
     @collection.on('add', @appendChick, this)
@@ -14,6 +15,15 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     @collection.each(@appendChick)
     this
     
+  startSpinner: (element) ->
+    element.fadeToggle 200, "swing", => @startSpinner element
+    
+  spinnerize: (element) =>
+    element.ajaxStart =>
+      @startSpinner element
+    element.ajaxStop ->
+      element.stop(true).css opacity: 1
+  
   appendChick: (chick) =>
     view = new Milkagotchi.Views.Chick(model: chick)
     @$('#chick_list').prepend(view.render().el)
