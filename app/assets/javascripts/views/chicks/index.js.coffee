@@ -40,4 +40,8 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     if response.status == 422
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
-        alert "#{attribute} #{message}" for message in messages
+        if attribute is "base"
+          $('#modal-box').modal().find('p').html message for message in messages
+        else
+          alert "#{attribute} #{message}" for message in messages
+        

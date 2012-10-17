@@ -18,11 +18,6 @@ body { padding-top: 60px; };
   @extend span4;
   width:320px;
 }
-legend {
-  border: {
-    bottom:1px solid #CCC;
-  }
-}
 .badge, .label {
   font: {
     family: "Source Code Pro";

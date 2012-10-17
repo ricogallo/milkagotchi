@@ -8,18 +8,15 @@ body {
   }
   .content {
     background: {
-      color: rgba(238,238,238,0.5);
+      color: rgba(249,249,249,0.5);
     }
     #new_chick_name {
-      width:227px;
+      width:220px;
     }
   }
 }
 #chick_list {
   line-height:1.5;
-  padding:{
-    left:7px;
-  }
   .chick {
     .name {
      &:hover {
@@ -33,12 +30,12 @@ body {
   }
 }
 ::-moz-selection {
-  background:#FF5E99;
-  color:#fff
+  background:#ff0;
+  color:#000
 }
 ::selection {
-  background:#FF5E99;
-  color:#fff
+  background:#ff0;
+  color:#000
 }
 
 #playground {

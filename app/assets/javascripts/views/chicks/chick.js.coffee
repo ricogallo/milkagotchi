@@ -10,7 +10,7 @@ class Milkagotchi.Views.Chick extends Backbone.View
   initialize: ->
     @model.on('destroy', @remove, this)
     Milkagotchi.notifier.on("#{@model.get('_id')}-changed", @updateChick, this)
-    @model.on('change', @render, this)
+    @model.on('change', @updateView, this)
     
   render: ->
     $(@el).html(@template(chick: @model))
@@ -22,6 +22,13 @@ class Milkagotchi.Views.Chick extends Backbone.View
           show: 500
           hide: 100
     this
+    
+  updateView: ->
+    @render()
+    this.$el.effect 'bounce',
+      times: 2
+      distance: 10,
+      100
     
   updateChick: ->
     @model.fetch()

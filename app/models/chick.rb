@@ -10,6 +10,7 @@ class Chick
   
   validates_presence_of :name
   validates :name, length: { within: 3..16 }, allow_blank: true
+  validate :maximum_number_of_chicks, on: :create
   
   HAPPY, MEH, SAD = "❤‿❤", "ఠ﹏ఠ", "ಠ︵ಠ"
   def as_json(options={})
@@ -24,6 +25,14 @@ class Chick
       MEH
     else
       SAD
+    end
+  end
+  
+  protected
+  def maximum_number_of_chicks
+    if Chick.count >= 5
+      errors.clear
+      errors[:base] << "Upgrade today your account and spawn MOAR chicks!"
     end
   end
 end
