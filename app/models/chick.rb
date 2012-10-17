@@ -8,6 +8,8 @@ class Chick
   field :fun, type: Integer, default: 3
   field :study, type: Integer, default: 0
   
+  attr_accessible :name
+  
   validates_presence_of :name
   validates :name, length: { within: 3..16 }, allow_blank: true
   validate :maximum_number_of_chicks, on: :create

@@ -2,7 +2,6 @@ class ChicksController < ApplicationController
   respond_to :json
   
   def index
-    sleep 2
     respond_with Chick.all
   end
   
@@ -11,7 +10,6 @@ class ChicksController < ApplicationController
   end
   
   def create
-    sleep 1
     respond_with Chick.create(params[:chick])
   end
   
