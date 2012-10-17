@@ -13,8 +13,20 @@ class ChicksController < ApplicationController
     respond_with Chick.create(params[:chick])
   end
   
-  def update
-    respond_with Chick.update(params[:id], params[:chick])
+  def feed
+    respond_with Chick.find(params[:id]).feed
+  end
+  
+  def clean
+    respond_with Chick.find(params[:id]).clean
+  end
+  
+  def play
+    respond_with Chick.find(params[:id]).play
+  end
+  
+  def deliver_milk
+    respond_with Chick.find(params[:id]).deliver_milk
   end
   
   def destroy

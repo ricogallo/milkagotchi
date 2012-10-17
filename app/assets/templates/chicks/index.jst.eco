@@ -1,13 +1,13 @@
 <div class="row">
   <div class="span4_5 content">
-    <form id="new_chick" class="form-inline">
+    <form id="new-chick" class="form-inline">
       <legend>Spawn new chicks</legend>
       <div class="input-append">
-        <input type="text" placeholder="Type the chick's name" name="name" id="new_chick_name" autofocus>
+        <input type="text" placeholder="Type the chick's name" name="name" id="new-chick-name" autofocus>
         <input type="submit" value="Boom!" class="btn">
       </div>
     </form>
-    <section id="chick_list"><section>
+    <section id="chick-list"><section>
   </div>
   <div id="playground" class="span6 content"></div>
 </div>

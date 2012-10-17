@@ -6,7 +6,7 @@ class Chick
   field :food, type: Integer, default: 3
   field :toilet, type: Integer, default: 3
   field :fun, type: Integer, default: 3
-  field :study, type: Integer, default: 0
+  field :milk, type: Integer, default: 0
   
   attr_accessible :name
   
@@ -14,7 +14,7 @@ class Chick
   validates :name, length: { within: 3..16 }, allow_blank: true
   validate :maximum_number_of_chicks, on: :create
   
-  HAPPY, MEH, SAD = "❤‿❤", "ఠ﹏ఠ", "ಠ︵ಠ"
+  HAPPY, MEH, SAD = "◕‿◕", "ఠ﹏ఠ", "ಠ︵ಠ"
   def as_json(options={})
     super options.merge(methods: :mood)
   end
@@ -28,6 +28,35 @@ class Chick
     else
       SAD
     end
+  end
+  
+  def feed
+    self.update_attributes!(
+      food: (self.food + 2)
+    )
+  end
+  
+  def clean
+    self.update_attributes!(
+      toilet: (self.toilet + 2)
+    )
+  end
+  
+  def play
+    self.update_attributes!(
+      food: (self.food - 1),
+      toilet: (self.toilet -1),
+      fun: (self.fun + 2)
+    )
+  end
+  
+  def deliver_milk
+    self.update_attributes!(
+      food: (self.food -1),
+      toilet: (self.toilet -1),
+      fun: (self.fun -1),
+      milk: (self.milk + 1)
+    )
   end
   
   protected

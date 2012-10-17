@@ -8,7 +8,9 @@ module MilkagotchiSchedules
           job.unschedule
         else
           self[attribute] -= 1
-          self.save!
+          if self.save!
+            Pusher["chicks"].trigger("#{self.id}-changed", {}.to_json)
+          end
         end
       end
     end
