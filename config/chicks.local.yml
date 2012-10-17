@@ -1,5 +1,5 @@
 chick_timers:
   food:   2m
-  toilet: 2m
-  fun:    4m
+  toilet: 5m
+  fun:    6m
   study:  10m

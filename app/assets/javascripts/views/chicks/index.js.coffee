@@ -9,6 +9,7 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     Milkagotchi.notifier.subscribe('chicks')
     @collection.on('reset', @render, this)
     @collection.on('add', @appendChick, this)
+    @collection.on('play', @displayGame, this)
   
   render: ->
     $(@el).html(@template())
@@ -35,7 +36,9 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
       wait: true
       success: $('#new_chick')[0].reset()
       error: @handleError
-      
+  
+  displayGame: (id) ->
+    
   handleError: (chick, response) ->
     if response.status == 422
       errors = $.parseJSON(response.responseText).errors

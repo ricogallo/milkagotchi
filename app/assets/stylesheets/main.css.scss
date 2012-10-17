@@ -11,19 +11,25 @@ body {
       color: rgba(249,249,249,0.5);
     }
     #new_chick_name {
-      width:220px;
+      width:225px;
     }
   }
 }
 #chick_list {
   line-height:1.5;
   .chick {
+    .mood {
+      text-align:center;
+    }
     .name {
      &:hover {
        text-decoration:underline;
      }
     }
     .close {
+      font:{
+        size: 22px;
+      }
       float:none;
       display:none;
     }
