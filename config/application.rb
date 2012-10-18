@@ -15,13 +15,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module Milkagotchi
-  def self.config
-    Application.config
-  end
-  
+module Milkagotchi  
   class Application < Rails::Application
-
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       
@@ -86,15 +81,5 @@ module Milkagotchi
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
-    #custom configuration for rufus_scheduler gem
-    config.scheduler = Rufus::Scheduler.start_new
-    
-    #load external configurations (i.e. API keys, game options )
-    ["pusher", "chicks"].each do |conf|
-      Psych.load_file("#{Rails.root}/config/#{conf}.yml").each do |key, value|
-        config.send "#{key}=", value
-      end
-    end
   end
 end

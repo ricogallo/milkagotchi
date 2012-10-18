@@ -15,6 +15,7 @@ gem "mongoid", ">= 3.0.9"
 gem "rufus-scheduler", require: "rufus/scheduler"
 gem "pusher"
 gem "bootstrap-sass", ">= 2.1.0.0"
+gem "rails_config"
 
 group :development, :test do
   gem "rspec-rails", ">= 2.11.0"

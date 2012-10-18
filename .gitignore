@@ -75,7 +75,6 @@ pickle-email-*.html
 # vim artifacts
 **.swp
 
-#configurations
-config/pusher.yml
-config/mongoid.yml
-config/chicks.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

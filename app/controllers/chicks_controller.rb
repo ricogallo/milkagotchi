@@ -14,19 +14,19 @@ class ChicksController < ApplicationController
   end
   
   def feed
-    respond_with Chick.find(params[:id]).feed
+    respond_with GameAction.new(params[:id], "feed").run
   end
   
   def clean
-    respond_with Chick.find(params[:id]).clean
+    respond_with GameAction.new(params[:id], "clean").run
   end
   
   def play
-    respond_with Chick.find(params[:id]).play
+    respond_with GameAction.new(params[:id], "play").run
   end
   
   def deliver_milk
-    respond_with Chick.find(params[:id]).deliver_milk
+    respond_with GameAction.new(params[:id], "deliver_milk").run
   end
   
   def destroy

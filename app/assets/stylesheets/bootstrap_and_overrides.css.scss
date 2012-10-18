@@ -10,6 +10,9 @@ body { padding-top: 60px; };
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
 }
+.span1_5 {
+  @extend span1;
+}
 .span2_5 {
   @extend span2;
   width:160px;

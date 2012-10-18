@@ -17,7 +17,7 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     this
     
   startSpinner: (element) ->
-    element.fadeToggle 200, "swing", => @startSpinner element
+    element.fadeToggle 150, "swing", => @startSpinner element
     
   spinnerize: (element) =>
     element.ajaxStart =>

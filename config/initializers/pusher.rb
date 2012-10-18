@@ -1,3 +1,3 @@
-Pusher.app_id = Milkagotchi.config.pusher["app_id"]
-Pusher.key    = Milkagotchi.config.pusher["api_key"]
-Pusher.secret = Milkagotchi.config.pusher["api_secret"]
+Pusher.app_id = Settings.pusher.app_id
+Pusher.key    = Settings.pusher.api_key
+Pusher.secret = Settings.pusher.api_secret

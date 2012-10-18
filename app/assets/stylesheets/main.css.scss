@@ -6,6 +6,9 @@ body {
   background:{
     image: url('retina_wood.png');
   }
+  #heart {
+    color: #BF0000;
+  }
   .content {
     background: {
       color: rgba(249,249,249,0.5);
@@ -51,6 +54,12 @@ body {
     image: url('milk.png');
     repeat:no-repeat;
     position:center center;
+  }
+  #mood {
+    text-align:center;
+    font:{
+      size: 60px;
+    }
   }
 }
 .tooltip_class {
