@@ -25,6 +25,6 @@ class ChickObserver < Mongoid::Observer
   end
   
   def send_notification(chick)
-    Pusher["chicks"].trigger("chick-changed", chick).o
+    Pusher["chicks"].trigger("chick-changed", chick)
   end
 end
