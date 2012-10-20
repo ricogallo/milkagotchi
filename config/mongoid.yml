@@ -81,9 +81,9 @@ test:
 production:
   sessions:
     default:
-      database: <%= Setting.mongohq.database %>
-      username: <%= Setting.mongohq.user %>
-      password: <%= Setting.mongohq.password %>
+      database: <%= Settings.mongohq.database %>
+      username: <%= Settings.mongohq.user %>
+      password: <%= Settings.mongohq.password %>
       uri: <%= ENV['MONGOHQ_URL'] %>
       options:
         skip_version_check: true
