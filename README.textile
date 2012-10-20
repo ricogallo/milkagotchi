@@ -2,7 +2,6 @@ h1. Milkagotchi
 
 Because milk makes you happier
 
-Homepage: "!http://sleepy-everglades-2609.herokuapp.com/!":Here
-
+"Link to the Heroku app":http://sleepy-everglades-2609.herokuapp.com/
 
 "!https://codeclimate.com/badge.png!":https://codeclimate.com/github/ricogallo/milkagotchi
