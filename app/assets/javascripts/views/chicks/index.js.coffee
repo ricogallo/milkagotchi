@@ -5,28 +5,29 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
     'submit #new-chick': 'createChick'
       
   initialize: ->
+    Milkagotchi.notifier.subscribe('chicks')
+    Milkagotchi.notifier.on("chick-changed", @updateChick, this)
     @spinnerize $('#heart')
-    Milkagotchi.notifier.subscribe 'chicks'
-    @collection.on 'reset', @render, this
-    @collection.on 'add', @appendChick, this
-    @collection.on 'play', @displayGame, this
+    @collection.on('reset', @render, this)
+    @collection.on('add', @appendChick, this)
+    @collection.on('play', @displayGame, this)
   
   render: ->
-    $(@el).html @template()
-    @collection.each @appendChick
+    $(@el).html(@template())
+    @collection.each(@appendChick)
     this
     
   startSpinner: (element) ->
-    element.fadeToggle 150, "swing", => @startSpinner element
+    element.fadeToggle(150, "swing", => @startSpinner(element))
     
   spinnerize: (element) =>
     element.ajaxStart =>
-      @startSpinner element
+      @startSpinner(element)
     element.ajaxStop ->
-      element.stop(true).css opacity: 1
+      element.stop(true).css(opacity: 1)
   
   appendChick: (chick) =>
-    view = new Milkagotchi.Views.Chick model: chick
+    view = new Milkagotchi.Views.Chick(model: chick)
     @$('#chick-list').prepend view.render().el
     
   createChick: (event) ->
@@ -36,10 +37,13 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
       wait: true
       success: $('#new-chick')[0].reset()
       error: @handleError
+      
+  updateChick: (data) ->
+    @collection.get(data["_id"]).set(data)
   
   displayGame: (id) ->
-    view = new Milkagotchi.Views.Playground model: @collection.get(id)
-    $('#playground').html view.render().el
+    view = new Milkagotchi.Views.Playground(model: @collection.get(id))
+    $('#playground').html(view.render().el)
     
   handleError: (chick, response) ->
     if response.status == 422
@@ -48,5 +52,5 @@ class Milkagotchi.Views.ChicksIndex extends Backbone.View
         if attribute is "base"
           $('#modal-box').modal().find('p').html message for message in messages
         else
-          alert "#{attribute}: #{message}" for message in messages
+          alert("#{attribute}: #{message}") for message in messages
         

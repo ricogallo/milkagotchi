@@ -16,6 +16,7 @@ gem "rufus-scheduler", require: "rufus/scheduler"
 gem "pusher"
 gem "bootstrap-sass", ">= 2.1.0.0"
 gem "rails_config"
+gem "virtus"
 
 group :development, :test do
   gem "rspec-rails", ">= 2.11.0"

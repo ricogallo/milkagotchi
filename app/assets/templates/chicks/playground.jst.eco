@@ -1,23 +1,38 @@
-<div class="row" id="metrics">
-  <div class="span2 food">
+<div class="row" >
+  <div class="span1_5" id="food-metric">
+    <p>Feed it!</p>
     <div class="progress progress-success progress-striped">
       <div class="bar" style="width: <%= @chick.get('food') * 20 %>%;"></div>
     </div>
   </div>
-  <div class="span2 toilet">
-    <div class="progress progress-info progress-striped">
+  <div class="span1_5" id="toilet-metric">
+    <p>Bath it!</p>
+    <div class="progress progress-important progress-striped">
       <div class="bar" style="width: <%= @chick.get('toilet') * 20 %>%;"></div>
     </div>
   </div>
-  <div class="span2 fun">
+  <div class="span1_5" id="fun-metric">
+    <p>Play with it!</p>
     <div class="progress progress-warning progress-striped">
-      <div class="bar bar-success" style="width: <%= @chick.get('fun') * 20 %>%;"></div>
+      <div class="bar" style="width: <%= @chick.get('fun') * 20 %>%;"></div>
+    </div>
+  </div>
+  <div class="span1_5" id="milk-metric">
+    <p>Deliver milk!</p>
+    <div class="progress progress-danger progress-striped">
+      <div class="bar" style="width: <%= @chick.get('milk') * 20 %>%;"></div>
     </div>
   </div>
 </div>
-<div class="row" id="mood">
-  <div class="span6"><%= @chick.get('mood') %></div>
+<div class="row">
+  <div class="span6" id="mood"><%= @chick.get('mood') %></div>
 </div>
 <div class="row" id="commands">
-  <div class="span2 offset2"></div>
+  <div class="span2 offset2">
+    <div class="btn-group">
+      <button class="btn btn-large right">&nbsp;❯</button>
+      <button class="btn btn-large ok disabled">❤</button>
+      <button class="btn btn-large escape disabled">✕</button>
+    </div>
+  </div>
 </div>

@@ -2,18 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$milkagotchiRed: #BF0000;
 body {
   background:{
     image: url('retina_wood.png');
   }
   #heart {
-    color: #BF0000;
+    color: $milkagotchiRed;
   }
   .content {
     background: {
       color: rgba(249,249,249,0.5);
     }
     #new-chick-name {
+      font:{
+        family: "Source Code Pro";
+        size:14px;
+      }
       width:225px;
     }
   }
@@ -39,27 +44,40 @@ body {
   }
 }
 ::-moz-selection {
-  background:#ff0;
+  background:#0095FF;
   color:#000
 }
 ::selection {
-  background:#ff0;
+  background:#0095FF;
   color:#000
 }
 
 #playground {
   margin-left: 40px;
-  height:400px;
+  height:412px;
+  text-align:center;
   background:{
     image: url('milk.png');
     repeat:no-repeat;
     position:center center;
   }
   #mood {
-    text-align:center;
-    font:{
-      size: 60px;
+    text-shadow: 0px 5px 5px #777;
+    border-top:1px solid #E5E5E5;
+    border-bottom:1px solid #E5E5E5;
+    padding:{
+      top: 100px;
     }
+    margin:{
+      bottom: 20px;
+    }
+    height:180px;
+    font:{
+      size: 160px;
+    }
+  }
+  p {
+    font-size: 15px;
   }
 }
 .tooltip_class {
@@ -67,5 +85,4 @@ body {
     family: "Source Code Pro";
   }
 }
-
 

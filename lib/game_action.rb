@@ -1,13 +1,13 @@
 class GameAction
-  attr_reader :chick
+  attr_reader :chick, :action
   
-  def initialize id, action
+  def initialize(id, action)
     @action = action
     @chick =  Chick.find(id)
   end
   
   def run
-    @operations = Settings.game_actions[action]
+    @operations = Settings.game_actions[action].to_hash
     chick.update_attributes!(generate_attributes) if @operations
     chick
   end

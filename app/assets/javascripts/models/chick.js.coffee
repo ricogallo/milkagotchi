@@ -1,17 +1,20 @@
 class Milkagotchi.Models.Chick extends Backbone.Model
   idAttribute: "_id"
   
-  feed: (opts) ->
-    custom_action("feed", opts)
+  game_actions: ->
+    [@feed, @clean, @play, @deliver_milk]
+  
+  feed: (opts) =>
+    @custom_action("feed", opts)
     
-  clean: (opts) ->
-    custom_action("clean", opts)
+  clean: (opts) =>
+    @custom_action("clean", opts)
     
-  play: (opts) ->
-    custom_action("play", opts)
+  play: (opts) =>
+    @custom_action("play", opts)
     
-  deliver_milk: (opts) ->
-    custom_action("deliver_milk", opts)
+  deliver_milk: (opts) =>
+    @custom_action("deliver_milk", opts)
     
   custom_action: (action, opts) ->
     options = 

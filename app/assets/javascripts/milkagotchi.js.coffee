@@ -10,7 +10,4 @@ window.Milkagotchi =
     Backbone.history.start(pushState: true)
 
 $(document).ready ->
-  Pusher.log = (message) ->
-    window.console.log message
-  WEB_SOCKET_DEBUG = true;
   Milkagotchi.init()

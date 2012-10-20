@@ -2,7 +2,7 @@ class Milkagotchi.Routers.Chicks extends Backbone.Router
   routes:
     "": "index"
     "play/:id": "index"
-    "*default": "defaultRoute"
+    "*default": "index"
     
   initialize: ->
     @collection = new Milkagotchi.Collections.Chicks()
@@ -12,6 +12,3 @@ class Milkagotchi.Routers.Chicks extends Backbone.Router
     view = new Milkagotchi.Views.ChicksIndex(collection: @collection)
     $('#milkagotchi').html(view.render().el)
     @collection.trigger('play', id) if id
-    
-  defaultRoute: ->
-    @index()
