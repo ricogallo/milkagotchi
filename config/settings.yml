@@ -1,13 +1,17 @@
 secret_token: your_secret_token
+mongohq:
+  database: your_db
+  user: username
+  password: password
 pusher:
   app_id: your_app_id
   api_key: your_api_key
   api_secret: your_api_secret
 chick_timers:
-  food:   1m
-  toilet: 2m
-  fun:    3m
-  milk:  5m
+  food:   10s
+  toilet: 20s
+  fun:    1m
+  milk:  2m
 game_actions:
   feed:
     food: 2
