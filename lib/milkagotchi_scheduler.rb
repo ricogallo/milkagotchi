@@ -21,7 +21,7 @@ module MilkagotchiScheduler
   
   def manage(chick)
     get_timer_attributes(chick).each do |attribute, value|
-      timer = find_by_tag("#{chick.id}:#{attribute}").first.o
+      timer = find_by_tag("#{chick.id}:#{attribute}").first
       if value > 0
         timer.unschedule if timer
         reduce_an_attribute_every(chick, attribute, timers_settings[attribute.to_sym])

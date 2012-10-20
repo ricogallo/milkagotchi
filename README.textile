@@ -1,3 +1,5 @@
 h1. Milkagotchi
 
 Because milk makes you happier
+
+"!https://codeclimate.com/badge.png!":https://codeclimate.com/github/ricogallo/milkagotchi
